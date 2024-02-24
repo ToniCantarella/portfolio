@@ -1,0 +1,11 @@
+.navbar-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background-color: red;
+    &:hover {
+        background-color: aqua;
+    }
+}
