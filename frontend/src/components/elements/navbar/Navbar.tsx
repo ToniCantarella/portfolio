@@ -7,12 +7,11 @@ type NavbarProps = {}
 export const Navbar = (props: NavbarProps) => {
     const elements = [
         {
-            label: "zero",
+            label: "Eka",
             path: "",
-            logo: <div>":)"</div>,
         },
         {
-            label: "First",
+            label: "FirsT",
             path: "",
         },
         {
@@ -26,21 +25,20 @@ export const Navbar = (props: NavbarProps) => {
     ]
 
     return (
-        <div className="navbar">
-            <NavbarElement label="frontpage" path="" />
+        <nav className="navbar">
             <ul>
+                <NavbarElement label="frontpage" path="" start />
                 {elements.map((element) => (
-                    <li key={element.label}>
-                        <NavbarElement
-                            label={element.label}
-                            path={element.path}
-                            logo={element.logo}
-                        />
-                    </li>
+                    <NavbarElement
+                        key={element.label}
+                        label={element.label}
+                        path={element.path}
+                        icon={element.icon}
+                    />
                 ))}
+                <NavbarElement label="footer" path="" end />
             </ul>
-            <NavbarElement label="footer" path="" />
-        </div>
+        </nav>
     )
 }
 export default Navbar
